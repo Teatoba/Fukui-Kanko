@@ -6,12 +6,14 @@ await show ("どれが福井の景色か当ててみましょう")
 
 await bg(31);
 await show("問題")
+let score = 0
 let a = await show("この景色は福井でしょうか", ["福井", "福井ではない"]);
  if (a == "福井"){
         await show("残念");
         
     } else {
     await show("正解");
+    score = score + 1;
     }
     
 await bg(2746);
@@ -19,12 +21,37 @@ await show("問題")
 let b = await show("この景色は福井でしょうか", ["福井", "福井ではない"]);
  if (b == "福井"){
         await show("正解");
+        score = score + 1
         
     } else {
     await show("残念");
     }
 
-await bg
+await show ("次は何番目が福井の景色か当ててみましょう")
+await bg(32);
+await show ("次へ")
+await bg(2522);
+await show ("次へ")
+await bg(1570);
+await show ("次へ")
+await bg(34);
+await show ("次へ")
+await bg(55);
+let c = await show("何番目に福井の写真があったでしょう", ["1","2","3","4","5"]);
+
+if (c == "4"){
+        await bg(34)
+        await show("正解");
+        score = score + 1
+        
+    } else {
+    await bg(34)
+    await show("残念　4でした");
+    }
+
+
+
+
 
     
 </script>
