@@ -1,2 +1,38 @@
 <h1>観光アプリらしい<h1>
-  
+ <script type="module">
+import { bg, show } from "https://js.sabae.cc/egadv.js";
+await bg(3969);
+await show ("あなたは福井を知っていますか？")
+await show ("どれが福井の景色か当ててみましょう")
+let b = 1
+for(;;){
+    
+   
+    await show("問題")
+    await bg(31)
+    let a = await show("この景色は福井でしょうか", ["福井", "福井ではない"]);
+    if (b > 0){
+         b = b - 1
+        if (a == "福井"){
+        await show("残念");
+        
+    } else {
+        b = b - 1
+    await show("正解");
+        
+    }
+    }else
+    
+    {await bg(2746)
+        await show("この景色は福井でしょうか", ["福井", "福井ではない"]);
+        
+        if (a == "福井"){
+        await show("正解");
+        break
+    } else {
+    await show("残念");
+    break
+    }
+}
+}
+</script> 
